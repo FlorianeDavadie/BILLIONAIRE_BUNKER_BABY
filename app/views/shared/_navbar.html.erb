@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://i.pinimg.com/736x/15/06/55/1506550f2246ac3e7de04b504137f910.jpg" %>
+      <%= image_tag "https://i.pinimg.com/736x/15/06/55/1506550f2246ac3e7de04b504137f910.jpg", class:"img-fluid rounded"%>
     <% end %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-2 col-md-3 col-sm-12 p-0">
-                                    <button type="button" class="btn btn-outline-dark">Search</button>
+                                    <button type="button" class="btn btn-outline-dark fw-bold">Search</button>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +62,7 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Login", new_user_session_path, class: "nav-link fs-5 fw-bold" %>
           </li>
         <% end %>
       </ul>
