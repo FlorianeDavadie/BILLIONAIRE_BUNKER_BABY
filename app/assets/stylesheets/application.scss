@@ -10,3 +10,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.banner {
+  position: relative;
+  background-image: url("photo-banner.jpg");
+}
