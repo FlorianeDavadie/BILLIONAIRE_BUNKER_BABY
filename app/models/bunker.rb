@@ -1,5 +1,4 @@
 class Bunker < ApplicationRecord
-  belongs_to :User
+  belongs_to :user
   has_one_attached :photo
-  #validates
 end
