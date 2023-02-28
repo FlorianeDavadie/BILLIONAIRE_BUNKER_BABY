@@ -6,26 +6,23 @@
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
 }
 
 .card::before {
   content: "";
   position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
   background: rgba(0, 0, 0, 0.1);
   opacity: 0;
   transition: all 0.3s ease;
+  z-index: -1;
 }
 
 .card:hover::before {
-  opacity: 1;
-}
-
-.titre-homepage {
-  font-family: cursive;
+  opacity: 0.5;
 }
