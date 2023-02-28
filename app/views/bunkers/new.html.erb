@@ -8,10 +8,14 @@
             autofocus: true,
             input_html: { autocomplete: "title" } %>
 
-      <%= f.input :description,
-            required: true,
-            autofocus: true,
-            input_html: { autocomplete: "description" } %>
+<%= simple_form_for(@bunker) do |f| %>
+  <div class="form-inputs">
+
+    <%= f.input :title,
+          required: true,
+          autofocus: true,
+          input_html: { autocomplete: "title" } %>
+     <%= f.input :photo, as: :file %>
 
       <%= f.input :prix,
             required: true,
