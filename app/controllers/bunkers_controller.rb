@@ -35,5 +35,4 @@ class BunkersController < ApplicationController
   def bunker_params
     params.require(:bunker).permit(:title, :description, :prix, :location)
   end
-
 end
