@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #6e17f0;
+  background: #0b0416;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,7 +10,7 @@
 .navbar-brand img {
   width: 50px;
   border-radius: 50px;
-  border-color: rgb(0, 255, 26);
+  border-color: #CEA732;
   border-width: 3px ;
 }
 
@@ -18,3 +18,15 @@
 //   border-radius: 100px;
 //   border-color: aqua;
 // }
+
+.login {
+  color: white;
+}
+
+.login:hover {
+  color: white;
+}
+
+.search {
+  color: white;
+}
