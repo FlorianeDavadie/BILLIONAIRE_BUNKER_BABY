@@ -1,6 +1,10 @@
 <div class="container">
-<h2>Log in</h2>
-
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md-6 offset-lg-3">
+        <div class="bg-white rounded p-3 shadow">
+          <h2>Log in</h2>
+          
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
   data: {turbo: false}) do |f| %>
   <div class="form-inputs">
@@ -24,11 +28,14 @@
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
+            <div class="form-actions">
+              <%= f.button :submit, "Log in", class: "submit-button" %>
+            </div>
+          <% end %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
 </div>
