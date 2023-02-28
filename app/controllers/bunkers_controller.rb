@@ -1,5 +1,10 @@
 class BunkersController < ApplicationController
-  before_action :set_bunker, :only %i[new create edit]
+  before_action :set_bunker, only: %i[create edit]
+  before_action :authenticate_user!
+
+  def index
+    @bunkers = Bunker.all
+  end
 
   def new
     @bunker = Bunker.new
