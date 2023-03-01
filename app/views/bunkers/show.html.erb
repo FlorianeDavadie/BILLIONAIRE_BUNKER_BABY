@@ -1,1 +1,22 @@
-g
+<h1 class = " fs-3 fw-1" > Hellooooo welcome to your created offers!</h1>
+
+ <li class="list-group-item">
+   <%= @bunker.title %>
+   <% if @bunker.photo.attached? %>
+      <%= cl_image_tag @bunker.photo.key, height: 300, width: 400, crop: :fill %>
+
+   <% end %>
+   <%= @bunker.description %>
+   <%= @bunker.prix %>
+ </li>
+  <% if current_user == @bunker.user  %>
+
+  <%= link_to "Delete",
+    bunker_path(@bunker),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <%= link_to "edit your offer", edit_bunker_path(@bunker.id) %>
+  <%= link_to "Back to the offers",
+    bunkers_path(@bunker),
+    data: {turbo_method: :bunkers}%>
+
+  <% end %>
