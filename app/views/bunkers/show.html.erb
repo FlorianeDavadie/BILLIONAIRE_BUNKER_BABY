@@ -1,8 +1,10 @@
 <h1 class = " fs-3 fw-1" > Hellooooo welcome to your created offers!</h1>
+
  <li class="list-group-item">
    <%= @bunker.title %>
    <% if @bunker.photo.attached? %>
       <%= cl_image_tag @bunker.photo.key, height: 300, width: 400, crop: :fill %>
+
    <% end %>
    <%= @bunker.description %>
    <%= @bunker.prix %>

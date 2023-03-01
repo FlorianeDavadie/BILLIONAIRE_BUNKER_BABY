@@ -18,7 +18,6 @@
                       autofocus: true,
                       input_html: { autocomplete: "photo" } %>
 
-
                   <%= f.input :description,
                         required: true,
                         autofocus: true,
@@ -29,8 +28,11 @@
                         autofocus: true,
                         input_html: { autocomplete: "prix" } %>
 
-                 <%= f.submit "Submit offer ", class: "btn btn-dark btn-lg btn-block mt-4 custom-button" %>
-                 <%= link_to "back to home", root_path %>
+                    <div class="form-actions text-center">
+                      <%= f.submit "Submit offer ", class: "btn btn-dark btn-lg btn-block mt-4 custom-button" %>
+                      <%= link_to "back to home", root_path %>
+                    </div>
+
               </div>
             <% end %>
         </div>
