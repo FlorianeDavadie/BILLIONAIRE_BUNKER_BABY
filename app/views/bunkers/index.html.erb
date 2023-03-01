@@ -2,7 +2,7 @@
 
 <% @bunkers.each do |bunker| %>
     <%= bunker.title %>
-    <li><%= cl_image_tag bunker.photo.key, height: 300, width: 400, crop: :fill %></li>
+    <li><%= cl_image_tag bunker.photo.key, height: 300, width: 400, crop: :fill class: "img_bunker" %></li>
     <li><%= bunker.description %> </li>
     <li><%= bunker.prix %></li>
  <% end %>

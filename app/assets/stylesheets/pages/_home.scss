@@ -3,6 +3,7 @@
 .card {
   position: relative;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -39,4 +40,10 @@
 #banner {
   background-image: url("example.jpg");
   background-size: cover;
+}
+
+.img_bunker {
+  width: 100%;
+  object-fit: cover;
+  height: 250px;
 }
