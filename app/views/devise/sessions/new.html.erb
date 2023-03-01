@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12 col-md-6 offset-lg-3">
         <div class="bg-white rounded p-3 shadow">
-          <h2>Log in</h2>
+          <h2 class="form-title text-center mb-5">Log in</h2>
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
   data: {turbo: false}) do |f| %>
   <div class="form-inputs">
@@ -18,8 +18,8 @@
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
-            <div class="form-actions">
-              <%= f.button :submit, "Log in", class: "submit-button" %>
+            <div class="form-actions text-center">
+              <%= f.button :submit, "Log in", class: "submit-button", class: "btn btn-dark btn-lg btn-block mt-4 custom-button " %>
             </div>
           <% end %>
 
