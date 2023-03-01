@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
 
-  resources :bunkers, only: [:index,:new, :show, :create, :edit]
+  resources :bunkers
 end
 
 # resources :bookings, :only %i[show new destroy]
