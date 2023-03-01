@@ -9,6 +9,8 @@
    <%= @bunker.description %>
    <%= @bunker.prix %>
  </li>
+  <% if current_user == @bunker.user  %>
+
   <%= link_to "Delete",
     bunker_path(@bunker),
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
@@ -16,3 +18,5 @@
   <%= link_to "Back to the offers",
     bunkers_path(@bunker),
     data: {turbo_method: :bunkers}%>
+
+  <% end %>

@@ -47,7 +47,9 @@
           <li class="nav-item dropdown">
             <%= image_tag "https://resize-elle.ladmedia.fr/rcrop/796,1024/img/var/plain_site/storage/images/societe/les-enquetes/francoise-bettencourt-meyers-je-n-ai-qu-un-but-retrouver-ma-mere./14840702-3-fre-FR/Francoise-Bettencourt-Meyers-Je-n-ai-qu-un-but-retrouver-ma-mere..jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Create offer", new_bunker_path, class: "dropdown-item" %>
+
+              <%= link_to "Post your bunker", new_bunker_path, class: "dropdown-item" %>
+
               <%# <%= link_to "Another action", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete},
               class: "dropdown-item" %>
