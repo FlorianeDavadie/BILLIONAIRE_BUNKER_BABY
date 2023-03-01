@@ -1,5 +1,5 @@
 class BunkersController < ApplicationController
-  before_action :set_bunker, only: %i[show edit destroy]
+  before_action :set_bunker, only: %i[show edit update destroy]
   before_action :authenticate_user!
 
   def index
@@ -17,10 +17,15 @@ class BunkersController < ApplicationController
     @bunker = Bunker.new(bunker_params)
     @bunker.user = current_user
     if @bunker.save
-      redirect_to bunker_path(@bunker)
+      redirect_to bunkers_path(@bunker)
     else
       render :new
     end
+  end
+
+  def update
+    @bunker.update(bunker_params)
+    redirect_to bunker_path(@bunker)
   end
 
   def edit
