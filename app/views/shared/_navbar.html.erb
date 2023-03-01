@@ -39,13 +39,13 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link fs-5 fw-bold" %>
+            <%= link_to "Home", "#", class: "login-navbar nav-link fs-5 fw-light" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link fs-5 fw-bold" %>
+            <%= link_to "Messages", "#", class: "login-navbar nav-link fs-5 fw-light" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://images.unsplash.com/photo-1623106405790-0ed93dd15bab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "https://resize-elle.ladmedia.fr/rcrop/796,1024/img/var/plain_site/storage/images/societe/les-enquetes/francoise-bettencourt-meyers-je-n-ai-qu-un-but-retrouver-ma-mere./14840702-3-fre-FR/Francoise-Bettencourt-Meyers-Je-n-ai-qu-un-but-retrouver-ma-mere..jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
               <%# <%= link_to "Another action", "#", class: "dropdown-item" %>

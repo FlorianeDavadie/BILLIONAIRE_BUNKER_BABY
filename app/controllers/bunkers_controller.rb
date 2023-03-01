@@ -1,5 +1,5 @@
 class BunkersController < ApplicationController
-  before_action :set_bunker, only: %i[create edit]
+  before_action :set_bunker, only: %i[show edit]
   before_action :authenticate_user!
 
   def index
@@ -10,12 +10,12 @@ class BunkersController < ApplicationController
     @bunker = Bunker.new
   end
 
-  # def show
-  # end
+  def show
+  end
 
   def create
     @bunker = Bunker.new(bunker_params)
-    @bunker.user = @user
+    @bunker.user = current_user
     if @bunker.save
       redirect_to bunker_path(@bunker)
     else
@@ -38,6 +38,6 @@ class BunkersController < ApplicationController
   end
 
   def bunker_params
-    params.require(:bunker).permit(:title, :description, :prix, :location)
+    params.require(:bunker).permit(:title, :description, :prix, :location, :photo, :user)
   end
 end

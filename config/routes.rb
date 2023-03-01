@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "pages#home"
+  root to: "pages#home" # "bunker#index"
 
-  resources :bunkers, only: [:new, :show, :create, :edit]
+  resources :bunkers, only: [:index, :new, :show, :create, :edit]
 end
 
 # resources :bookings, :only %i[show new destroy]
