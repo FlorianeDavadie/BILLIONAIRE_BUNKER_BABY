@@ -13,17 +13,23 @@
 
 <strong><h1 class = "titre-homepage text-center mt-4 w-100 p-3" > <i class="fa-solid fa-star"></i>Welcome to our luxury bunkers Billios !</h1></strong>
 
-<div class="container">
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-    <div class="col">
-      <div class="card">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <p class="card-text"></p>
-        </div>
-        <div class="card::before"></div>
+
+<div class="banner">
+
+   <div class="background-overlay">
+   </div>
+
+      <div class="row row-cols-1 row-cols-md-3">
+        <% @bunkers.each do |bunker| %>
+            <div class="col-md-4">
+              <div class="card h-100">
+                <%= cl_image_tag bunker.photo.key, height: 300, width: 400, crop: :fill%>
+                <div class="card-body">
+                  <h5 class="card-title"> <%= bunker.description %></h5>
+                  <p class="card-text"> <%= bunker.prix %></p>
+                </div>
+              </div>
+            </div>
+        <% end %>
       </div>
-    </div>
-  </div>
 </div>

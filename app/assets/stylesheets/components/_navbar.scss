@@ -31,3 +31,23 @@
 .search {
   color: #CEA732;
 }
+
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+
+.login-navbar {
+  color: #CEA732;
+}
+
+.login-navbar:hover {
+  color: #CEA732;
+}
+
+.navbar-nav {
+  align-items: center;
+}
