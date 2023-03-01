@@ -1,5 +1,5 @@
 class BunkersController < ApplicationController
-  before_action :set_bunker, only: %i[show edit]
+  before_action :set_bunker, only: %i[show edit destroy]
   before_action :authenticate_user!
 
   def index
@@ -27,8 +27,8 @@ class BunkersController < ApplicationController
   end
 
   def destroy
-    @bunker.destroy
-    redirect_to bunker_path(@bunker.user), status: :see_other
+    @bunker.destroy!
+    redirect_to bunkers_path(@bunker.user), status: :see_other
   end
 
   private
