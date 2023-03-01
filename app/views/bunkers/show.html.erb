@@ -1,13 +1,17 @@
-<h1 class = " fs-3 fw-1" > Hellooooo welcome to your created offers!</h1>
+<h1 class = "titre-show fs-3 fw-1 text-center" >  Welcome to your offers </h1>
+<div class="show">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card card-bunker">
 
  <li class="list-group-item">
-   <%= @bunker.title %>
+   <li><%= @bunker.title %></li>
    <% if @bunker.photo.attached? %>
       <%= cl_image_tag @bunker.photo.key, height: 300, width: 400, crop: :fill %>
 
    <% end %>
-   <%= @bunker.description %>
-   <%= @bunker.prix %>
+   <li><%= @bunker.description %></li>
+    <li><%= @bunker.prix %></li>
  </li>
   <% if current_user == @bunker.user  %>
 
@@ -20,3 +24,7 @@
     data: {turbo_method: :bunkers}%>
 
   <% end %>
+  </div>
+    </div>
+  </div>
+</div>
