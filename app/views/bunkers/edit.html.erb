@@ -1,11 +1,41 @@
-<%= form_with model: @bunker do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-   <%= f.label :photo %>
-  <%= f.text_field :photo %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.label :prix %>
-  <%= f.text_field :prix %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12 col-md-6 offset-lg-3">
+        <div class="bg-white rounded p-3 shadow">
+          <h2 class = "text-center fw-1 fs-1 m-5">  Update your post here </h2>
+
+
+      <%= simple_form_for(@bunker) do |f| %>
+          <div class="form-inputs">
+            <%= f.input :title %>
+            <%= f.input :photo %>
+            <%= f.input :description %>
+            <%= f.input :prix %>
+            <div class="form-actions text-center">
+            <%= f.submit "Update your offer ", class: "btn btn-dark btn-lg btn-block mt-4 custom-button" %>
+            </div>
+          </div>
+      <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<%# <%= form_with model: @bunker do |f| %>
+  <%# <%= f.label :title %>
+  <%# <%= f.text_field :title %>
+
+   <%# <%= f.input :photo %>
+  <%# <%= f.label :description %>
+  <%# <%= f.text_field :description %>
+  <%# <%= f.label :prix %>
+  <%# <%= f.text_field :prix %>
+  <%# <%= f.submit %>
+<%# <% end %>
