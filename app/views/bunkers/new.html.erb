@@ -5,29 +5,28 @@
         <div class="bg-white rounded p-3 shadow">
           <h2 class = "text-center fw-1 fs-1 m-5">  Create Your Bunker's offer !</h2>
 
-  <%= simple_form_for(@bunker) do |f| %>
-    <div class="form-inputs">
-      <%= f.input :title,
-            required: true,
-            autofocus: true,
-            input_html: { autocomplete: "title" } %>
+          <%= simple_form_for(@bunker) do |f| %>
+              <div class="form-inputs">
 
-      <%= f.input :description,
-            required: true,
-            autofocus: true,
-            input_html: { autocomplete: "description" } %>
+                <%= f.input :title,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "title" } %>
+                 <%= f.input :title %>
 
-      <%= f.input :prix,
-            required: true,
-            autofocus: true,
-            input_html: { autocomplete: "prix" } %>
-    </div>
+                  <%= f.input :description,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "description" } %>
 
-    <div class="form-actions text-center ">
-      <%= f.button :submit, "Confirm your publication offer's", class: "btn btn-dark btn-lg btn-block mt-4 custom-button" %>
-     </div>
-    <% end %>
+                  <%= f.input :prix,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "prix" } %>
 
+                 <%= f.submit "Submit offer ", class: "btn btn-dark btn-lg btn-block mt-4 custom-button" %>
+              </div>
+            <% end %>
         </div>
       </div>
     </div>
@@ -57,5 +56,3 @@
      </div>
    <% end %>
 </div>
-
-<%# <%= render "devise/shared/links" %>

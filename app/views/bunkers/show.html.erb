@@ -1,1 +1,18 @@
-<h1> Hellooooo !</h1>
+<h1 class = " fs-3 fw-1" > Hellooooo welcome to your created offers!</h1>
+
+ <li class="list-group-item"%>
+   <%= bunkers.title %>
+   <%= bunkers.description %>
+   <%= bunkers.prix %>
+ </li>
+
+
+  <%= link_to "Delete",
+    bunker_path(@bunker),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+
+  <%= link_to "edit your offer", edit_bunker_path(@bunker.id) %>
+  <%= link_to "Back to the offers",
+    bunkers_path(@bunker),
+    data: {turbo_method: :bunkers}%>
