@@ -10,3 +10,35 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body  {
+  padding-top: 70px;
+}
+
+body a {
+  text-decoration: none;
+  color: black;
+
+}
+
+.custom-button {
+  color: gold;
+}
+.container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.container > * {
+  transform: translateZ(40px);
+  transition: transform 0.3s ease-out;
+}
+
+.container:hover > * {
+  transform: translateZ(60px);
+}
+
+input,
+textarea {
+  color: gold;
+}

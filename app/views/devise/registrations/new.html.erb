@@ -3,10 +3,10 @@
     <div class="row">
       <div class="col-12 col-md-6 offset-lg-3">
         <div class="bg-white rounded p-3 shadow">
-          <h2>Sign up</h2>
+          <h2 class="form-title text-center mb-5">Sign up</h2>
 
           <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}) do |f| %>
-            <%= f.error_notification %>
+            <%= f.error_notification class: "alert alert-danger" %>
 
             <div class="form-inputs">
               <%= f.input :first_name,
@@ -31,8 +31,8 @@
                           input_html: { autocomplete: "new-password" } %>
             </div>
 
-            <div class="form-actions">
-              <%= f.button :submit, "Sign up" %>
+            <div class="form-actions text-center">
+              <%= f.button :submit, "Sign up", class: "btn btn-dark btn-lg btn-block mt-4 custom-button" %>
             </div>
           <% end %>
           <%= render "devise/shared/links" %>
