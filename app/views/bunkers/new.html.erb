@@ -1,6 +1,8 @@
 <h2 class = "text-center fw-1 fs-1 m-5">  Create Your Bunker's offer !</h2>
 
 
+
+
 <%= simple_form_for(@bunker) do |f| %>
   <div class="form-inputs">
 
@@ -8,7 +10,7 @@
           required: true,
           autofocus: true,
           input_html: { autocomplete: "title" } %>
-     <%= f.input :photo, as: :file %>
+     <%= f.input :title %>
 
      <%= f.input :description,
           required: true,
@@ -19,11 +21,7 @@
           required: true,
           autofocus: true,
           input_html: { autocomplete: "prix" } %>
-  </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "confirm your publication offer's" %>
+     <%= f.submit "Submit offer ", class: "btn btn-primary" %>
   </div>
 <% end %>
-
-<%# <%= render "devise/shared/links" %>
