@@ -4,18 +4,22 @@ class BunkersController < ApplicationController
 
   def index
     @bunkers = Bunker.all
+    @bunkers = policy_scope(Bunker)
   end
 
   def new
     @bunker = Bunker.new
+    authorize @bunker
   end
 
   def show
+    authorize @bunker
   end
 
   def create
     @bunker = Bunker.new(bunker_params)
     @bunker.user = current_user
+     authorize @bunker
     if @bunker.save
       redirect_to bunkers_path(@bunker)
     else
@@ -26,13 +30,16 @@ class BunkersController < ApplicationController
   def update
     @bunker.update(bunker_params)
     redirect_to bunker_path(@bunker)
+     authorize @bunker
   end
 
   def edit
+   authorize @bunker
   end
 
   def destroy
     @bunker.destroy!
+     authorize @bunker
     redirect_to bunkers_path(@bunker.user), status: :see_other
   end
 
