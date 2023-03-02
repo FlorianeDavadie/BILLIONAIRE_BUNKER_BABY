@@ -3,9 +3,9 @@
 <div class="container profile-body">
   <div class="card-profile">
           <div class="inner">
-              <p class="title">Elon Musk</p>
+              <p class="title"><%= current_user.first_name%> <%= current_user.last_name %></p>
               <div class="image">
-                  <img src="https://s4.uupload.ir/files/em_1sb.png" alt="">
+                  <%= cl_image_tag current_user.photo.key%>
               </div>
               <div class="items">
                   <div class="item">
@@ -26,4 +26,8 @@
               </div>
           </div>
   </div>
+
+
+
+
 </div>

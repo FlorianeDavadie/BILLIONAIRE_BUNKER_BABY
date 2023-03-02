@@ -4,7 +4,8 @@
 }
 
 .profile-body {
-  min-height: 80vh;
+  margin-top: 40px;
+  min-height: 70vh;
   display: flex;
   justify-content: left;
   // align-items: center;
@@ -34,13 +35,15 @@
       color: gold;
       text-align: center;
       font-family: 'Poppins', sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       position: relative;
       margin-top: 10px;
       bottom: 10px;
       opacity: 0;
       transition: opacity .6s;
+
   }
+
   .image {
       width: 100%;
       position: absolute;
