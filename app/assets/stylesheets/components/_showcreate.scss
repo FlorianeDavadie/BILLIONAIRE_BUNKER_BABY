@@ -7,3 +7,58 @@ margin-top: 20px;
 .titre-show{
   margin-top: 20px;
 }
+.card-bunker {
+  border: none;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-bunker .card-img-top {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-bunker .card-body {
+  padding: 20px;
+}
+
+.card-bunker .card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-bunker .card-text {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #ff5a5f;
+  border-color: #ff5a5f;
+}
+
+.btn-primary:hover {
+  background-color: #ff4449;
+  border-color: #ff4449;
+}
+
+.btn-secondary {
+  background-color: #484848;
+  border-color: #484848;
+}
+
+.btn-secondary:hover {
+  background-color: #363636;
+  border-color: #363636;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #c82333;
+}

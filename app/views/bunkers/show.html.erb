@@ -1,30 +1,25 @@
-<h1 class = "titre-show fs-3 fw-1 text-center" >  Welcome to your offers </h1>
+<h1 class="titre-show fs-3 fw-1 text-center">Welcome to your offers</h1>
+
 <div class="show">
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="card card-bunker">
+        <% if @bunker.photo.attached? %>
+          <%= cl_image_tag @bunker.photo.key, height: 300, width: 400, class: "card-img-top" %>
+        <% end %>
+        <div class="card-body">
+          <h2 class="card-title"><%= @bunker.title %></h2>
+          <p class="card-text"><%= @bunker.description %></p>
+          <p class="card-text"><%= @bunker.prix %></p>
 
- <li class="list-group-item">
-   <li><%= @bunker.title %></li>
-   <% if @bunker.photo.attached? %>
-      <%= cl_image_tag @bunker.photo.key, height: 300, width: 400, crop: :fill %>
-
-   <% end %>
-   <li><%= @bunker.description %></li>
-    <li><%= @bunker.prix %></li>
- </li>
-  <% if current_user == @bunker.user  %>
-
-  <%= link_to "Delete",
-    bunker_path(@bunker),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-  <%= link_to "edit your offer", edit_bunker_path(@bunker.id) %>
-  <%= link_to "Back to the offers",
-    bunkers_path(@bunker),
-    data: {turbo_method: :bunkers}%>
-
-  <% end %>
-  </div>
+          <% if current_user == @bunker.user  %>
+            <%= link_to "Delete", bunker_path(@bunker), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>
+            <%= link_to "Edit your offer", edit_bunker_path(@bunker.id), class: "btn btn-primary" %>
+            <%= link_to "Back to the offers", bunkers_path, data: {turbo_method: :get}, class: "btn btn-secondary" %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
