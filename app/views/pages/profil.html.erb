@@ -1,5 +1,13 @@
-<%= current_user.email %>
-<% current_user.bunkers.each do |bunker| %>
-<%= bunker.title %>
+<strong><h1 class = "titre-homepage text-center mt-4 w-100 p-3" >Your profile</h1></strong>
 
-<% end %>
+<div class="container">
+  <div class="card-product">
+      <img src="" />
+    <div class="card-product-infos">
+        <h2><%= current_user.email %></h2>
+        <p><% current_user.bunkers.each do |bunker| %>
+          <%= bunker.title %></p>
+          <% end %>
+    </div>
+  </div>
+</div>
