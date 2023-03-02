@@ -1,13 +1,22 @@
 <h1 class = "titre-show fs-3 fw-1 text-left mb-5"> Here's your offers !</h1>
 
-        <% @bunkers.each do |bunker| %>
-        <%= bunker.title %>
-          <% if bunker.photo.attached? %>
-              <%= cl_image_tag bunker.photo.key, height: 300, width: 400, crop: :fill, class: "img_bunker"%>
-          <% end %>
-            <li><%= bunker.description %> </li>
-            <li><%= bunker.prix %></li>
-        <% end %>
+  <div class="container">
+          <div class="row row-cols-1 row-cols-md-3">
+            <% @bunkers.each do |bunker| %>
 
-        <%= link_to "Add new offer", new_bunker_path if policy(bunker).new?%>
-        <%# <%= link_to "New Offer", new_bunker_path if policy(bunker).new? %> 
+                <div class="col-md-4 mb-4">
+                  <div class="card h-100">
+                    <% if bunker.photo.attached? %>
+                      <%= cl_image_tag bunker.photo.key, height: 300, width: 400, crop: :fill, class: "img_bunker"%>
+                    <% end %>
+                    <div class="card-body">
+                      <h5 class="card-title"> <%= bunker.description %></h5>
+                      <p class="card-text"> <%= bunker.prix %></p>
+
+                  <%= link_to "Add new offer", new_bunker_path if policy(bunker).new?%>
+                  <%# <%= link_to "New Offer", new_bunker_path if policy(bunker).new? %> 
+            <% end %>
+                  </div>
+              </div>
+          </div>
+  </div>

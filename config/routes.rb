@@ -5,4 +5,5 @@ Rails.application.routes.draw do
     resources :bookings, only: %i[new show create edit update destroy]
   end
   # get "/bunkers/:id", to: "bunkers#show_bunkers"
+  get "/profil", to: "pages#profil"
 end

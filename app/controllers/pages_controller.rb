@@ -3,4 +3,7 @@ class PagesController < ApplicationController
   def home
     @bunkers = Bunker.all
   end
+
+  def profil
+  end
 end
