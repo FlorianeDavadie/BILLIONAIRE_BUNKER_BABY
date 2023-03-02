@@ -16,20 +16,14 @@
                      <p><% if current_user == @bunker.user  %>
 
                       <%= link_to "Delete", bunker_path(@bunker), data: {turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
-                      <% if policy(@bunker).edit? %>
+                      <%# <% if policy(@bunker).edit? %> %>
                       <%= link_to "Edit your offer", edit_bunker_path(@bunker.id), class: "btn btn-primary" %>
-
+                      <%# <% end %> %>
                       <%= link_to "Dashboard", profil_path, data: {turbo_method: :get}, class: "btn btn-secondary" %>
-                          <% end %>
+                      <% end %>
 
                 </div>
             </div>
         </div>
   </div>
 </div>
-
-<%# <% if policy(@bunker).edit? %>
-  <%# <%= link_to "Edit this offer", edit_bunker_path(@bunker) %>
-<%# <% end %>
-<!-- [...] -->
-<%# <%= button_to "Destroy this offer", @bunker, method: :delete if policy(@bunker).destroy? %>

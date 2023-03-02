@@ -11,8 +11,7 @@ class BunkersController < ApplicationController
     else
       @bunkers = Bunker.all
     end
-    
-    @bunkers = Bunker.all
+
     # @bunkers = policy_scope(Bunker)
 
   end
