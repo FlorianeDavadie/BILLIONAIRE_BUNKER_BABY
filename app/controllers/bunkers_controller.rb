@@ -2,8 +2,14 @@ class BunkersController < ApplicationController
   before_action :set_bunker, only: %i[show edit update destroy]
   before_action :authenticate_user!
 
+  # modif flo
   def index
-    @bunkers = Bunker.all
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR description ILIKE :query"
+      @bunkers = Bunker.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @bunkers = Bunker.all
+    end
   end
 
   def new
