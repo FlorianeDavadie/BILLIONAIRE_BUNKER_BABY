@@ -1,5 +1,7 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: %i[show edit update destroy]
+  before_action :set_bunker, only: %i[new create]
+
   def new
     @booking = Booking.new
   end
@@ -12,10 +14,10 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.bunker = @bunker
+    @booking.user = current_user
     if @booking.save
       redirect_to bunker_path(@bunker)
     else
-      @bunker = Bunker.new
       render :new, status: :unprocessable_entity
     end
   end
