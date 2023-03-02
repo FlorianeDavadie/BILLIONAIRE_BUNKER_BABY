@@ -1,30 +1,35 @@
-<h1 class = "titre-show fs-3 fw-1 text-center" >  Welcome to your offers </h1>
-<div class="show">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card card-bunker">
+<h1 class = "titre-show fs-3 fw-1 text-center mb-4" > Welcome to your offers </h1>
 
- <li class="list-group-item">
-   <li><%= @bunker.title %></li>
-   <% if @bunker.photo.attached? %>
-      <%= cl_image_tag @bunker.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="container">
+  <div class="card mb-5">
+        <div class="row no-gutters">
+            <div class="col-auto">
+                <% if @bunker.photo.attached? %>
+                  <%= cl_image_tag @bunker.photo.key, height: 300, width: 400, crop: :fill%>
+                <% end %>
+            </div>
+            <div class="col">
+                <div class="card-block px-2">
+                    <h4 class="card-title mt-3"><%= @bunker.title %></h4>
+                    <p class="card-text"><%= @bunker.description %></p>
+                    <p class="card-text"><%= @bunker.prix %></p>
+                     <p><% if current_user == @bunker.user  %>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-   <% end %>
-   <li><%= @bunker.description %></li>
-    <li><%= @bunker.prix %></li>
- </li>
-  <% if current_user == @bunker.user  %>
-
-  <%= link_to "Delete",
-    bunker_path(@bunker),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-  <%= link_to "edit your offer", edit_bunker_path(@bunker.id) %>
-  <%= link_to "Back to the offers",
-    bunkers_path(@bunker),
-    data: {turbo_method: :bunkers}%>
-
-  <% end %>
-  </div>
-    </div>
+                      <%= link_to "Delete",
+                            bunker_path(@bunker),
+                            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+                      <%= link_to "Edit your offer", edit_bunker_path(@bunker.id) %>
+                        <%= link_to "Back to the offers",
+                            bunkers_path(@bunker),
+                            data: {turbo_method: :bunkers}%></p>
+                          <% end %>
+                </div>
+            </div>
+        </div>
   </div>
 </div>

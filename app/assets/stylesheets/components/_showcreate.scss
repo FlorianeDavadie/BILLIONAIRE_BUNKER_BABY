@@ -1,9 +1,17 @@
 .card-bunker {
-
 margin-bottom: 20px;
 margin-top: 20px;
+display: flex; // modif flo
+flex-direction: row // modif flo
 }
 
 .titre-show{
-  margin-top: 20px;
+  margin-top: 30px; // modif flor
+  font-family: cursive; // modif flor
+}
+
+.description { // modif flo
+  display: flex;
+  flex-direction: row;
+  align-self: auto
 }
