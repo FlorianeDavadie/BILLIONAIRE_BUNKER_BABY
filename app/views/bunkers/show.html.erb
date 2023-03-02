@@ -20,16 +20,13 @@
 <br>
 <br>
 
-                      <%= link_to "Delete",
-                            bunker_path(@bunker),
-                            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-                      <%= link_to "Edit your offer", edit_bunker_path(@bunker.id) %>
-                        <%= link_to "Back to the offers",
-                            bunkers_path(@bunker),
-                            data: {turbo_method: :bunkers}%></p>
+                      <%= link_to "Delete", bunker_path(@bunker), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>
+                      <%= link_to "Edit your offer", edit_bunker_path(@bunker.id), class: "btn btn-primary" %>
+                      <%= link_to "Back to the offers", bunkers_path, data: {turbo_method: :get}, class: "btn btn-secondary" %>
                           <% end %>
                 </div>
             </div>
         </div>
   </div>
 </div>
+
