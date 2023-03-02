@@ -13,7 +13,8 @@
                       <h5 class="card-title"> <%= bunker.description %></h5>
                       <p class="card-text"> <%= bunker.prix %></p>
 
-                  <%= link_to "Add new offer", new_bunker_path %>
+                  <%= link_to "Add new offer", new_bunker_path if policy(bunker).new?%>
+                  <%# <%= link_to "New Offer", new_bunker_path if policy(bunker).new? %> 
             <% end %>
                   </div>
               </div>
