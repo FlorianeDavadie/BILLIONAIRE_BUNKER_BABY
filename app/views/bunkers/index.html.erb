@@ -14,7 +14,7 @@
                       <% end %>
                           <div class="card-body">
                             <h5 class="card-title"> <%= bunker.description %></h5>
-                            <p class="card-text"> <%= bunker.prix %></p>
+                            <p class="card-text"> <%= bunker.prix.to_i %></p>
 
                             <%= link_to "CHECK THE OFFER", bunker_path(bunker) %>
 

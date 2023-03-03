@@ -16,7 +16,7 @@
                     <div class="card-block px-2">
                       <h4 class="card-title mt-3"><%= @bunker.title %></h4>
                       <p class="card-text"><%= @bunker.description %></p>
-                      <p class="card-text"><%= @bunker.prix %>$ / Night</p>
+                      <p class="card-text"><%= @bunker.prix.to_i %>$ / Night</p>
                       <p><% if current_user == @bunker.user  %>
 
 
