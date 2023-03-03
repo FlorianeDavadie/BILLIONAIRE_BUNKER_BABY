@@ -7,8 +7,11 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = Booking.new
-    @bunker = Bunker.new(bunker: @bunker)
+    @bunker = @booking.bunker
+  end
+
+  def total_days
+    self.end_date - self.start_date
   end
 
   def create
@@ -16,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.bunker = @bunker
     @booking.user = current_user
     if @booking.save
-      redirect_to bunker_path(@bunker)
+      redirect_to booking_path(@booking)
     else
       render :new, status: :unprocessable_entity
     end
@@ -36,15 +39,14 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date_debut, :date_fin, :price, :user, :bunker)
+    params.require(:booking).permit(:start_date, :end_date, :price, :user, :bunker)
   end
 
   def set_booking
-    @booking = Bookmark.find(params[:id])
+    @booking = Booking.find(params[:id])
   end
 
   def set_bunker
     @bunker = Bunker.find(params[:bunker_id])
   end
-
 end
