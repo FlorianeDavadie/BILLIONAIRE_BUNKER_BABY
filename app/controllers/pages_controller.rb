@@ -5,5 +5,7 @@ class PagesController < ApplicationController
   end
 
   def profil
+    @bunkers = Bunker.where(user: current_user)
+    @bookings = Booking.where(user: current_user)
   end
 end

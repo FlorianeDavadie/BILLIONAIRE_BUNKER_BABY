@@ -45,7 +45,8 @@ user3.photo.attach(io: user3_file, filename: "user3.jpg", content_type: "image/j
 user3.save!
 
 file2 = URI.open("https://res.cloudinary.com/dzwtudz1z/image/upload/v1677676258/rod-long-2P_ifaetDm0-unsplash_oghyic.jpg")
-bunker = Bunker.new(title: "Green Bunker", description: "Melbourne - Australia", location: "", prix: 10_000, user: user3)
+bunker = Bunker.new(title: "Green Bunker", description: "Melbourne - Australia", location: "Welcome to Green Bunker! The Bunker is a beautiful 10 acre home located in the Melbourne area with 8 Bedrooms. 
+  Pick up any of our provided rackets and play a set of tennis. Take a jump into our pool and cool off on a hot summer day. Enjoy our Eero mesh integrated WiFi system throughout the house with speeds up to 300 Mbps. Featured on a few TV shows, if you are looking for a quiet, secluded place north of New York, you have found your place.", prix: 10_000, user: user3)
 bunker.photo.attach(io: file2, filename: "bunker3.jpg", content_type: "image/jpg")
 bunker.save!
 
@@ -55,7 +56,8 @@ user4.photo.attach(io: user4_file, filename: "user4.jpg", content_type: "image/j
 user4.save!
 
 file3 = URI.open("https://res.cloudinary.com/dzwtudz1z/image/upload/v1677672145/don-shetterly-VYZKzvk7qTw-unsplash_vyg8ob.jpg")
-bunker = Bunker.new(title: "Blue Bunker", description: "Seattle - USA", location: "", prix: 10_000, user: user4)
+bunker = Bunker.new(title: "Blue Bunker", description: "Seattle - USA", location: "Welcome to Blue Bunker! Relax and create lifelong memories at our 7,000 sq ft historic farmhouse mansion. Built 1859, Orchard Hill offers countless amenities, pool, hot tub, fire pit, ping pong table, wood-burning stove, baby grand piano, & so much more.
+  Hi-speed Wi-Fi mesh network and dedicated work space. Orchard Hill is the perfect blend of old world charm & the latest technology.", prix: 10_000, user: user4)
 bunker.photo.attach(io: file3, filename: "bunker4.jpg", content_type: "image/jpg")
 bunker.save!
 
@@ -65,7 +67,8 @@ user5.photo.attach(io: user5_file, filename: "user5.jpg", content_type: "image/j
 user5.save!
 
 file4 = URI.open("https://res.cloudinary.com/dzwtudz1z/image/upload/v1677676259/ralph-ravi-kayden-zSG-kd-L6vw-unsplash_jopgpr.jpg")
-bunker = Bunker.new(title: "Black Bunker", description: "Honolulu - Hawaï", location: "", prix: 20_000, user: user5)
+bunker = Bunker.new(title: "Black Bunker", description: "Honolulu - Hawaï", location: "Welcome to Black Bunker! A Stunning Brand New Home On a Verdant Hillside is Simply Like No Other. This Home Is Located in the Famed Neighborhood Where Hawaii 5-0 was Filmed.
+  Enjoy Over 6000 Sq Ft of Living Areas Featuring Walls of Glass, Concrete, Aluminum & Steel in Harmony W/ Teak, Hickory & Other Exotic Woods. Subzero Kitchen Appliances, Toto Bathroom Amenities, and a Bose Surround Sound System Through Out the Entire Home Lists Only a Few of the Epicurean Touches of This Magnificent Sanctuary.", prix: 20_000, user: user5)
 bunker.photo.attach(io: file4, filename: "bunker5.jpg", content_type: "image/jpg")
 bunker.save!
 
@@ -75,7 +78,8 @@ user6.photo.attach(io: user6_file, filename: "user6.jpg", content_type: "image/j
 user6.save!
 
 file5 = URI.open("https://res.cloudinary.com/dzwtudz1z/image/upload/v1677680893/mark-champs-Id2IIl1jOB0-unsplash_ixh2ew.jpg")
-bunker = Bunker.new(title: "Yellow Bunker", description: "Wellington - New-Zealand", location: "", prix: 15_000, user: user6)
+bunker = Bunker.new(title: "Yellow Bunker", description: "Auckland - New-Zealand", location: "This Yellow Bunker is an award-winning architectural masterpiece.An elegant interior boasts 6 ultra-luxurious bedrooms worthy of any international five-star resort. Generous indoor living spaces include a chic plunge pool, a tennis court, a playground, and a Cinema room.
+  Quiet, super private location close to both Palm Beach and Onetangi Beach. 3 minutes to Ostend, 10 minutes to Oneroa.", prix: 15_000, user: user6)
 bunker.photo.attach(io: file5, filename: "bunker6.jpg", content_type: "image/jpg")
 bunker.save!
 
@@ -85,7 +89,8 @@ user7.photo.attach(io: user7_file, filename: "user7.jpg", content_type: "image/j
 user7.save!
 
 file6 = URI.open("https://res.cloudinary.com/dzwtudz1z/image/upload/v1677680893/huum-NHLS5hOSH0c-unsplash_g8htso.jpg")
-bunker = Bunker.new(title: "Grey Bunker", description: "Bab El Oued - Algeria", location: "", prix: 25_000, user: user7)
+bunker = Bunker.new(title: "Grey Bunker", description: "Bab El Oued - Algeria", location: "Start each day with breakfast in your luxury kitchen, then spend the day lounging by the pool or reading in the pool house, pausing for complimentary coffee, tea or mineral water at the guest house.
+  Inside its open-concept rooms, Villa Jardin Nomade pairs traditional pieces—Beni Ouarain rugs, incredible artwork—with the modern—arc lamps, wall-to-wall windows—to stunning effect.  ", prix: 25_000, user: user7)
 bunker.photo.attach(io: file6, filename: "bunker7.jpg", content_type: "image/jpg")
 bunker.save!
 
@@ -95,7 +100,8 @@ user8.photo.attach(io: user8_file, filename: "user8.jpg", content_type: "image/j
 user8.save!
 
 file7 = URI.open("https://res.cloudinary.com/dzwtudz1z/image/upload/v1677672145/alex-holzreiter-i7nqRB8Fd0Y-unsplash_om7uof.jpg")
-bunker = Bunker.new(title: "Platinium Bunker", description: "São Paulo - Brazil", location: "", prix: 8_000, user: user8)
+bunker = Bunker.new(title: "Platinium Bunker", description: "São Paulo - Brazil", location: "Welcome to Platinium Bunker ! This property is called Brava Casa, by a material published in Italian magazine, that chose as one of the most beautiful houses in the world. Also considered by the famous architect that designed, Otavio Gabaglia Raja as The Best of Buzios.
+  The Brava Casa has 5 large-sized suites, complete, with high standards decoration from Africa, with split air conditioning, ceiling fan, complete bathroom with heated and pressurized water all overlooking the sea of Buzios.", prix: 8_000, user: user8)
 bunker.photo.attach(io: file7, filename: "bunker8.jpg", content_type: "image/jpg")
 bunker.save!
 
@@ -105,7 +111,8 @@ user9.photo.attach(io: user9_file, filename: "user9.jpg", content_type: "image/j
 user9.save!
 
 file8 = URI.open("https://res.cloudinary.com/dzwtudz1z/image/upload/v1677681385/adam-winger-To4Yip8rc-Q-unsplash_smnl03.jpg")
-bunker = Bunker.new(title: "Ruby Bunker", description: "Punta Cana - Dominican Republic", location: "", prix: 69_000, user: user9)
+bunker = Bunker.new(title: "Ruby Bunker", description: "Punta Cana - Dominican Republic", location: "Welcome to Platinium Bunker ! Hacienda B25 is a large, spacious, 6-bedroom, 6.5-bathroom home located the Hacienda community of Puntacana.
+  Right outside the gates, you will find Puntacana Village, a small community that offers 8 restaurants, bars, shops and a pharmacy while a few minutes away you can find Blue Mall with its collection of premium shops and restaurants.", prix: 69_000, user: user9)
 bunker.photo.attach(io: file8, filename: "bunker9.jpg", content_type: "image/jpg")
 bunker.save!
 

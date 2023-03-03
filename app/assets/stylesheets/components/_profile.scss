@@ -121,8 +121,21 @@
   transition: right .3s .5s;
 }
 
-.verticalLine {
-  border-left: thick solid #E1A201;
-  height: 420px;
-  margin-left: 40px;
+.bunker-created {
+  width: 100%;
+  object-fit: cover;
+  height: 250px;
 }
+
+.container-profile {
+  display: flex;
+  margin: 20px;
+  flex-direction: row
+}
+
+.v-line{
+
+  border-left: thick solid #E1A201;
+  height:520px;
+  margin-right: 70px;
+ }
