@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: %i[show edit update destroy]
+  before_action :set_booking, only: %i[show total_days edit update destroy]
   before_action :set_bunker, only: %i[new create]
 
   def new
@@ -10,9 +10,9 @@ class BookingsController < ApplicationController
     @bunker = @booking.bunker
   end
 
-  def total_days
-    self.end_date - self.start_date
-  end
+  # def total_days
+  #   @days = (self.end_date - self.start_date).to_i / 86_400
+  # end
 
   def create
     @booking = Booking.new(booking_params)
