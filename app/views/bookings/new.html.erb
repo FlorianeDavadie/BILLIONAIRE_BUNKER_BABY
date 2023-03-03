@@ -6,8 +6,8 @@
           <h2 class = "text-center fw-1 fs-1 m-5"> Booking </h2>
 
           <%= simple_form_for [@bunker, @booking] do |f| %>
-            <%= f.input :date_debut, as: :date, input_html: {class: "datepicker"}%>
-            <%= f.input :date_fin, as: :date, input_html: {class: "datepicker"}%>
+            <%= f.input :start_date, as: :date, input_html: {class: "datepicker"}%>
+            <%= f.input :end_date, as: :date, input_html: {class: "datepicker"}%>
 
                 <div class="form-actions text-center">
                   <%= f.submit "Submit booking ", class: "btn btn-dark btn-lg btn-block mt-4 custom-button" %>
