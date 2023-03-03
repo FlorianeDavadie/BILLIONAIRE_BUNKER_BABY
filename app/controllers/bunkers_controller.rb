@@ -9,7 +9,7 @@ class BunkersController < ApplicationController
       sql_query = "title ILIKE :query OR description ILIKE :query"
       @bunkers = Bunker.where(sql_query, query: "%#{params[:query]}%")
     else
-      @bunkers = Bunker.all
+      redirect_to root_path
     end
 
     # @bunkers = policy_scope(Bunker)
