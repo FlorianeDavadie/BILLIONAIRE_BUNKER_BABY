@@ -1,0 +1,44 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="card mb-5">
+          <div class="row no-gutters">
+                <div class="col-6">
+                    <% if @bunker.photo.attached? %>
+                      <%= cl_image_tag @bunker.photo.key, height: 300, width: 400, crop: :fill, class: "img_show"%>
+                    <% end %>
+                    <div class="card-block px-2">
+                      <h4 class="card-title mt-3"><%= @bunker.title %></h4>
+                      <p class="card-text"><%= @bunker.description %></p>
+                      <p class="card-text"><%= @bunker.prix %></p>
+                      <p><% if current_user == @bunker.user  %>
+
+
+                        <%= link_to "Delete", bunker_path(@bunker), data: {turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
+                        <%# <% if policy(@bunker).edit? %>
+                        <%= link_to "Edit your offer", edit_bunker_path(@bunker.id), class: "btn btn-primary" %>
+                        <%# <% end %>
+                        <%= link_to "Dashboard", profil_path, data: {turbo_method: :get}, class: "btn btn-secondary" %>
+                        <%# <%= link_to custom_url(:bunker_id => @bunker.id), class: "course-btn" do %>
+                      <% end %>
+                      </div>
+                </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+      <%# <%= @booking.start_date - @booking.end_date %>
+      <%= distance_of_time_in_words(contract['start_date'], contract['end_date'])%>
+
+    </div>
+  </div>
+</div>
